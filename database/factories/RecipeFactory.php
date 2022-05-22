@@ -28,6 +28,9 @@ class RecipeFactory extends Factory
             'description' => $this->faker->text(),
             'status' => Recipe::PUBLICADO,
             'subcategory_id' => $subcategory->id,
+            'description' => $this->faker->text(),
+            'preparation' => $this->faker->sentence(15),
+            'user_id' => 1,
         ];
     }
 }

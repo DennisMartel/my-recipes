@@ -19,11 +19,15 @@ return new class extends Migration
             $table->string('name');
             $table->string('slug');
             $table->text('description');
+            $table->longText('preparation');
             $table->enum('status', [Recipe::BORRADOR, Recipe::PUBLICADO])->default(Recipe::BORRADOR);
 
             $table->unsignedBigInteger('subcategory_id');
+            $table->unsignedBigInteger('user_id');
             
             $table->foreign('subcategory_id')->references('id')->on('subcategories');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+
             $table->timestamps();
         });
     }

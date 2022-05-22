@@ -23,8 +23,8 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        Storage::deleteDirectory('recipes');
-        Storage::makeDirectory('recipes');
+        // Storage::deleteDirectory('recipes');
+        // Storage::makeDirectory('recipes');
 
         $this->call(UserSeeder::class);
         $this->call(CategorySeeder::class);

@@ -37,4 +37,9 @@ class Recipe extends Model
     {
         return $this->morphMany(Image::class, 'imageable');
     }
+
+    public function author()
+    {
+        return $this->belongsTo(User::class, 'user_id');
+    }
 }

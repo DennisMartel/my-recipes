@@ -1,5 +1,5 @@
 # Demo en vivo
-<a href="http://recetas.solutionsmartel.com">DEMO</a>
+<a href="http://recetas.solutionsmartel.com" target="_blank">DEMO</a>
 
 # Imagenes demo
 <img src="https://github.com/DennisMartel/my-recipes/blob/master/public/img/demo.png" alt="Dennis Alexander Martel" />

@@ -18,4 +18,9 @@ class Category extends Model
     {
         return $this->hasMany(Subcategory::class);
     }
+
+    public function recipes()
+    {
+        return $this->hasManyThrough(Recipe::class, Subcategory::class);
+    }
 }

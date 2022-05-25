@@ -14,6 +14,11 @@ class Subcategory extends Model
         return 'slug';
     }
 
+    public function recipes()
+    {
+        return $this->hasMany(Recipe::class);
+    }
+
     public function category()
     {
         return $this->belongsTo(Category::class);

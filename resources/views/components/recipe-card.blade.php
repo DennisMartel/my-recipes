@@ -27,6 +27,6 @@
                 <i class="bi bi-star-fill text-{{ $recipe->rating >= 5 ? 'yellow' : 'gray' }}-500"></i>
             </li>
         </ul>
-        <a href="{{ route('recipe', $recipe) }}" class="inline-block uppercase bg-red-500 w-full rounded-lg text-white hover:bg-red-400 text-center py-1.5 font-bold mt-2">ver receta</a>
+        <a href="{{ route('recipe.show', $recipe) }}" class="inline-block uppercase bg-red-500 w-full rounded-lg text-white hover:bg-red-400 text-center py-1.5 font-bold mt-2">ver receta</a>
     </div>
 </article>

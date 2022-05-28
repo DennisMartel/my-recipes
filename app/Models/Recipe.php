@@ -28,6 +28,13 @@ class Recipe extends Model
         }
     }
 
+    public function scopeSearchRecipe($query, $search)
+    {
+        if ($search) {
+            return $query->where('name', 'LIKE', '%' . $search . '%');
+        }
+    }
+
     public function subcategory()
     {
         return $this->belongsTo(Subcategory::class);

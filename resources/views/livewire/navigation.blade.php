@@ -36,6 +36,11 @@
                         </x-jet-dropdown-link>
 
                         <div class="border-t border-gray-100"></div>
+                        <x-jet-dropdown-link href="{{ route('profile.show') }}">
+                            {{ __('Mis recetas') }}
+                        </x-jet-dropdown-link>
+
+                        <div class="border-t border-gray-100"></div>
 
                         <!-- Authentication -->
                         <form method="POST" action="{{ route('logout') }}" x-data>

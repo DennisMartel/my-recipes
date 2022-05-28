@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WebController;
 use App\Http\Controllers\RecipeController;
+use App\Http\Controllers\AuthorController;
 
 Route::get('/', WebController::class)->name('home');
 
@@ -14,7 +15,9 @@ Route::get('/subcategory/{slug}', function($slug) {
     return $slug;
 })->name('subcategory');
 
-Route::get('/recipe-detail/{recipe}', [RecipeController::class, 'show'])->name('recipe.show');
+Route::get('/recipe/{recipe}', [RecipeController::class, 'show'])->name('recipe.show');
+
+Route::get('/author/{user}', [AuthorController::class, 'show'])->name('author.show');
 
 Route::middleware([
     'auth:sanctum',
